@@ -105,6 +105,11 @@
 // };
 
 // export default Cards;
+
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import { BsFillTrash3Fill } from 'react-icons/bs';
 import axios from 'axios';
@@ -142,7 +147,7 @@ const Cards = ({ addProduct }) => {
       {data.map((item, index) => (
         <div className="card" key={index}>
           <div className="card__img">
-            <img src={item.Image} alt="" />
+            <img src={`${item.Image}`} alt="" />
           </div>
           <div className="card__body">
             <h2>{item.name}</h2>

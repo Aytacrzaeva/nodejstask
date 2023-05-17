@@ -66,28 +66,18 @@ import './Products.css'
 const Products = ({ addProduct }) => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
-  const [image, setImage] = useState('');
+  const [Image, setImage] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const productData = { name, price, image };
-
-    try {
-      const response = await axios.post('http://localhost:8080/', productData);
-      const newProduct = response.data;
-      addProduct(newProduct);
-      setName('');
-      setPrice('');
-      setImage('');
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <>
     <div className="form__contain">
-    <form className='form' onSubmit={handleSubmit}>
+    <form className='form' onSubmit={async (e)=>{
+      e.preventDefault();
+      const productData = { name, price, Image };
+      console.log(productData)
+      axios.post('http://localhost:8080/new',productData).then(res=>console.log(res))
+    }}>
       <h1>My New Products</h1>
       <label>
         Name:
@@ -111,7 +101,7 @@ const Products = ({ addProduct }) => {
         Image:
         <br /><input
           type="text"
-          value={image}
+          value={Image}
           onChange={(e) => setImage(e.target.value)}
         />
       </label>

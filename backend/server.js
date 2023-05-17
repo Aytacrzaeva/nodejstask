@@ -5,31 +5,31 @@
 // app.use(cors())
 // app.use(express.json())
 // const users = [
-//     {   
+//     {
 //         id:1,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Fancy Product",
 //         price: "80.00"
 //     },
-//     {   
+//     {
 //         id:2,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Special",
 //         price: "18.00"
 //     },
-//     {   
+//     {
 //         id:3,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Sale Item",
 //         price: "25.00"
 //     },
-//     {   
+//     {
 //         id:4,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Sale Item",
 //         price: "40.00"
 //     },
-//     {   
+//     {
 //         id:5,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Popular Item",
@@ -40,19 +40,19 @@
 //         name: "Fancy Product",
 //         price: "280.00"
 //     },
-//     {   
+//     {
 //         id:7,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Special Item",
 //         price: "18.00"
 //     },
-//     {   
+//     {
 //         id:8,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Popular Item",
 //         price: "40.00"
 //     },
-//     {   
+//     {
 //         id:9,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Popular Item",
@@ -84,9 +84,6 @@
 //     console.log(`app running on ${PORT}`)
 // })
 
-
-
-
 const express = require("express");
 const app = express();
 const PORT = 8080;
@@ -96,61 +93,62 @@ app.use(cors());
 app.use(express.json());
 
 const users = [
-    {   
-        id:1,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Fancy Product",
-        price: "80.00"
-    },
-    {   
-        id:2,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Special",
-        price: "18.00"
-    },
-    {   
-        id:3,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Sale Item",
-        price: "25.00"
-    },
-    {   
-        id:4,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Sale Item",
-        price: "40.00"
-    },
-    {   
-        id:5,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Popular Item",
-        price: "25.00"
-    },
-    {   id:6,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Fancy Product",
-        price: "280.00"
-    },
-    {   
-        id:7,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Special Item",
-        price: "18.00"
-    },
-    {   
-        id:8,
-        Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
-        name: "Popular Item",
-        price: "40.00"
-    }
-
-]
+  {
+    id: 1,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Fancy Product",
+    price: "80.00",
+  },
+  {
+    id: 2,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Special",
+    price: "18.00",
+  },
+  {
+    id: 3,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Sale Item",
+    price: "25.00",
+  },
+  {
+    id: 4,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Sale Item",
+    price: "40.00",
+  },
+  {
+    id: 5,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Popular Item",
+    price: "25.00",
+  },
+  {
+    id: 6,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Fancy Product",
+    price: "280.00",
+  },
+  {
+    id: 7,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Special Item",
+    price: "18.00",
+  },
+  {
+    id: 8,
+    Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+    name: "Popular Item",
+    price: "40.00",
+  },
+];
 app.get("/", (req, res) => {
+  console.log("req geldi");
   res.send(users);
 });
 
 app.post("/new", (req, res) => {
-  console.log(req.body);
+    console.log("req geldi")
   users.push(req.body);
   res.send(users);
 });
@@ -167,54 +165,32 @@ app.listen(PORT, () => {
   console.log(`app running on ${PORT}`);
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const users = [
-//     {   
+//     {
 //         id:1,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Fancy Product",
 //         price: "80.00"
 //     },
-//     {   
+//     {
 //         id:2,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Special",
 //         price: "18.00"
 //     },
-//     {   
+//     {
 //         id:3,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Sale Item",
 //         price: "25.00"
 //     },
-//     {   
+//     {
 //         id:4,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Sale Item",
 //         price: "40.00"
 //     },
-//     {   
+//     {
 //         id:5,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Popular Item",
@@ -225,19 +201,19 @@ app.listen(PORT, () => {
 //         name: "Fancy Product",
 //         price: "280.00"
 //     },
-//     {   
+//     {
 //         id:7,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Special Item",
 //         price: "18.00"
 //     },
-//     {   
+//     {
 //         id:8,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Popular Item",
 //         price: "40.00"
 //     },
-//     {   
+//     {
 //         id:9,
 //         Image: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
 //         name: "Popular Item",
