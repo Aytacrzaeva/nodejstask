@@ -1,0 +1,35 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 150px;
+}
+.navbar__left{
+    display: flex;
+    gap: 40px;
+}
+.navbar__left ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.navbar__left ul li{
+    list-style: none;
+}
+.navbar__left ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.navbar__left p{
+    font-size: 18px;
+}
+.navbar__right button{
+    padding: 5px 25px;
+    font-size: 15px;
+    border-radius: 5px;
+    background: none;
+    border: 1px solid;
+    margin-left: 10px;
+}
